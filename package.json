@@ -1,0 +1,24 @@
+{
+  "name": "hordescore-analytics",
+  "version": "1.0.0",
+  "description": "Protecting financial markets from digital collusion",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paddycassidy/hordescore-analytics.git"
+  },
+  "author": "Paddy Cassidy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ibm-watson": "^6.0.4",
+    "moment": "^2.29.1"
+  },
+  "bugs": {
+    "url": "https://github.com/paddycassidy/hordescore/issues"
+  },
+  "homepage": "https://github.com/paddycassidy/hordescore#readme"
+}

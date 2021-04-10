@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Hordescore</title>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src='env.js'></script>
+    </head>
+    <body>
+        <h1>Hordescore</h1>
+        <h4>Protecting financial markets from digital collusion</h4>
+        <h6>Input the stock code of your investment to get the full name</h6>
+        <div class="row">
+            <div class="input-field col s6">
+              <input value="" id="investment" type="text" class="validate">
+              <label class="active" for="investment">Stock code</label>
+            </div>
+          </div>
+          <a id='lookupBtn' class="waves-effect waves-light btn-large">Lookup</a>
+          <div class="row">
+            <div class="input-field col s6">
+              <input value="" id="result" type="text" class="validate">
+              <label class="active" for="result">Result</label>
+            </div>
+          </div>
+    </body>
+</html>
