@@ -15,27 +15,29 @@ const log = function(message){
 }
 
 //Watson Services
-const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1.js');
+const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
-const { response } = require('express');
-const nlukey = 'QC9hCtsIqY47ZP_9dKDNqivN-4a4dUpzkYPHNpVSbetP';
-
 //Natural Language Understanding service
 const nlu = new NaturalLanguageUnderstandingV1({
-    authenticator: new IamAuthenticator({apikey:nlukey}),
     version: '2019-07-12',
-});
+    authenticator: new IamAuthenticator({
+      apikey: 'QC9hCtsIqY47ZP_9dKDNqivN-4a4dUpzkYPHNpVSbetP',
+    }),
+    serviceUrl: 'https://api.au-syd.natural-language-understanding.watson.cloud.ibm.com/instances/351da398-946d-490d-b8dc-9bf80396610c',
+  });
 
 //function to analyze the parameters and return the results
 const analyze = function(text,response){
     const analyzeParams = {
         'text': text,
         'features': {
-            'categories': {
-                'limit': 10
-            }
-        }
-    }
+            'keywords': {
+              'emotion': true,
+              'sentiment': true,
+              'limit': 10,
+            },
+    },
+};
 
 nlu.analyze(analyzeParams)
 .then(analysisResults => {
