@@ -31,6 +31,7 @@ const analyze = function(text,response){
     const analyzeParams = {
         'text': text,
         'features': {
+            //should use the sentiment feature with targets!!! https://youtu.be/53Bip8-F7xw?t=350
             'keywords': {
               'emotion': true,
               'sentiment': true,
