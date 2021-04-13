@@ -56,6 +56,7 @@ app.get('/analyze',function(request,response){
     analyze(company,response)
 })
 
+
 const port = 3002;
 app.listen(port)
 log('Server is listening on port: ' + port)
