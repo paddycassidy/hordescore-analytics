@@ -28,10 +28,11 @@ const nlu = new NaturalLanguageUnderstandingV1({
 
 //function to analyze the parameters and return the results
 const analyze = function(company,response){
-    //replace the text with the crawled data set
-    let text = "Zip Co Limited provides point-of-sale credit and digital payment services to consumers and merchants in Australia, the United Kingdom, the United States, New Zealand, and South Africa. The company operates through ZIP AU, Zip Global, and Spotcap segments. It offers integrated retail finance solutions to merchants in the retail, education, health, and travel industries through online and in store. The company provides Zip Pay and Zip Money, which are digital wallets; and Pocketbook, a personal finance application to help people manage their finances, budget, and savings, as well as unsecured loans to small and medium sized businesses. In addition, it offers a Buy Now Pay Later services whereby consumers split repayments into equal instalments. The company was formerly known as ZipMoney Limited and changed its name to Zip Co Limited in December 2017. Zip Co Limited was incorporated in 2009 and is based in Sydney, Australia.";
+    //replace the url  with the crawled data set
+    let url = "https://www.reddit.com/r/ausstocks/comments/h94y6a/is_z1p_overvalued/";
+    
     const analyzeParams = {
-        'text': text,
+        'url': url,
         'features': {
             'sentiment': {
                 'targets': [company]
