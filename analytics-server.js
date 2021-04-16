@@ -58,6 +58,6 @@ app.get('/analyze',function(request,response){
 })
 
 
-const port = 3002;
+const port = 8080;
 app.listen(port)
 log('Server is listening on port: ' + port)
