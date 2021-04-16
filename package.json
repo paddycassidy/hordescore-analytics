@@ -1,14 +1,14 @@
 {
   "name": "hordescore-analytics",
   "version": "1.0.0",
-  "description": "Protecting financial markets from digital collusion",
+  "description": "Service to call the IBM Watson - NLU service",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node analytics-server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paddycassidy/hordescore-analytics.git"
+    "url": "https://github.com/paddycassidy/hordescore-analytics.git"
   },
   "author": "Paddy Cassidy",
   "license": "ISC",
@@ -18,7 +18,7 @@
     "moment": "^2.29.1"
   },
   "bugs": {
-    "url": "https://github.com/paddycassidy/hordescore/issues"
+    "url": "https://github.com/paddycassidy/hordescore-analytics/issues"
   },
-  "homepage": "https://github.com/paddycassidy/hordescore#readme"
+  "homepage": "https://github.com/paddycassidy/hordescore-analytics#readme"
 }
