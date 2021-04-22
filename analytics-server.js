@@ -52,7 +52,7 @@ nlu.analyze(analyzeParams)
 
 
 
-app.get('/analyze',function(request,response){
+app.get('https://hordescore-analytics.us-south.cf.appdomain.cloud/analyze',function(request,response){
     let company=request.query.company;
     analyze(company,response)
 })
