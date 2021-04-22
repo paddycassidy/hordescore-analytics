@@ -6,7 +6,7 @@ const moment = require('moment');
 const app = express();
 
 //serve static web pages
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 
 //function to timestamp all logs
 const log = function(message){
