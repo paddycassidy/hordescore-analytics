@@ -6,7 +6,7 @@ const moment = require('moment');
 const app = express();
 
 //serve static web pages
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 //function to timestamp all logs
 const log = function(message){
@@ -52,7 +52,7 @@ nlu.analyze(analyzeParams)
 
 
 
-app.get('https://hordescore-analytics.us-south.cf.appdomain.cloud/analyze',function(request,response){
+app.get('/analyze',function(request,response){
     let company=request.query.company;
     analyze(company,response)
 })
