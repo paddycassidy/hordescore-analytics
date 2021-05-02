@@ -17,9 +17,7 @@ const log = function(message){
 }
 
 //config cors 
-app.use(cors({
-    origin: 'https://hordescore.mybluemix.net/'
-}))
+app.use(cors())
 
 //Watson Services
 const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
