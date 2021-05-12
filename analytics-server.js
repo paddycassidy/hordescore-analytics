@@ -59,10 +59,11 @@ nlu.analyze(analyzeParams)
 
 app.get('/analyze',function(request,response){
     let company=request.query.company;
+    console.log(company);
     analyze(company,response)
 })
 
 
-const port = 8080;
+const port = 8082;
 app.listen(port)
 log('CORS-enabled web server is listening on port: ' + port)
