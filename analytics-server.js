@@ -64,6 +64,6 @@ app.get('/analyze',function(request,response){
 })
 
 
-const port = 8082;
+const port = 8080;
 app.listen(port)
 log('CORS-enabled web server is listening on port: ' + port)
