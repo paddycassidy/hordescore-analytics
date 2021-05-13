@@ -36,6 +36,14 @@ const analyze = function(company,response){
     //replace the static text with the crawled data set
     let text = "KGN operates as an online retailer in Australia. It sells bad products, but makes a lot of money. I say buy Kogan, as it has a big future. Zip Co Limited provides point-of-sale credit and digital payment services to consumers and merchants in Australia, the United Kingdom, the United States, New Zealand, and South Africa. In addition, it offers a Buy Now Pay Later services whereby consumers split repayments into equal instalments. It is overvalued at the current price, and the price will crash soon. If you buy ZIP now, be prepared to lose your money. It's too risky. Commonwealth bank on the other hand is a good bet. Commonwealth Bank of Australia (CBA) provides integrated financial services in Australia. It operates through 940 branches and 2,700 ATMs. The company was founded in 1911 and is based in Sydney, Australia. Westpac (WBC) is another bank that is a solid performer, more of an investment for the risk-averse investor but there will always be a business for banking, so Westpac has a strong future";
     
+
+    //const urlCrawler = 'http://localhost:8080/crawler'
+    //let text = app.get(urlCrawler, function(data){
+        //console.log('Crawler has returned: ' + data)
+        //return data;
+    //});
+
+    
     const analyzeParams = {
         'text': text,
         'features': {
