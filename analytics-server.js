@@ -4,6 +4,8 @@ const express = require('express');
 const moment = require('moment');
 //cors library
 const cors = require('cors');
+// use environment variables
+require('dotenv').config()
 
 const app = express();
 
@@ -26,7 +28,7 @@ const { IamAuthenticator } = require('ibm-watson/auth');
 const nlu = new NaturalLanguageUnderstandingV1({
     version: '2019-07-12',
     authenticator: new IamAuthenticator({
-      apikey: 'QC9hCtsIqY47ZP_9dKDNqivN-4a4dUpzkYPHNpVSbetP',
+      apikey: process.env.API_KEY,
     }),
     serviceUrl: 'https://api.au-syd.natural-language-understanding.watson.cloud.ibm.com/instances/351da398-946d-490d-b8dc-9bf80396610c',
   });
@@ -72,6 +74,7 @@ app.get('/analyze',function(request,response){
 })
 
 
-const port = 8080;
-app.listen(port)
-log('CORS-enabled web server is listening on port: ' + port)
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`CORS-enabled web server is listening on port ${port}`)
+})
